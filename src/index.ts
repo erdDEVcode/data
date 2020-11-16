@@ -1,5 +1,13 @@
 import { NetworkMetadata, NetworkMetadataMap, Token, TokenMap } from './types'
+
+/**
+ * @internal
+ */
 const networks = require('../data/networks.json')
+
+/**
+ * @internal
+ */
 const tokens = require('../data/tokens.json')
 
 export * from './types'

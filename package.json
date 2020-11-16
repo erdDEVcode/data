@@ -36,7 +36,7 @@
     "build-data": "mkdir -p ./dist/data && cp ./data/* ./dist/data",
     "build": "npm run build-data && tsc && tsc -p tsconfig-esm.json",
     "dev": "npm run build-data && tsc --watch",
-    "build-docs": "rm -rf ./docs && typedoc --out docs",
+    "build-docs": "rm -rf ./docs && typedoc",
     "publish-docs": "npm run build-docs && gh-pages -d docs",
     "prepublishOnly": "npm run build",
     "postpublish": "npm run publish-docs",

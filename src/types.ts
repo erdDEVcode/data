@@ -78,13 +78,40 @@ export interface PromiseResolver {
  * This reflects the data structures inside the `tokens.json` data file.
  */
 export interface Token {
+  /**
+   * Token id.
+   */
   id: string,
+  /**
+   * No. of digits to the right of the decimal point in the standard unit of this token.
+   * 
+   * For example, for eGLD the value should be 18. This also means the smallest unit of 
+   * denomination is 1 / 10^18.
+   */
   decimals: number,
+  /**
+   * The display-friendly symbol.
+   */
   symbol: string,
-  symbolFormatting?: string,
+  /**
+   * Display-friendly name.
+   */
   name: string,
+  /**
+   * How the symbol should be formatted.
+   * 
+   * This is specified as a string template utilising {value} and {symbol}
+   * 
+   * Default is `{value} {symbol}`.
+   */
+  symbolFormatting?: string,
+  /**
+   * The id to use for this token when fetching its exchange rate from Coingecko.
+   */
   rateApiName?: string,
-  rateMultiplier?: number
+  /**
+   * Either path to or a Base64-encoded string for an image representing the token.
+   */
   img?: string,
 }
 
