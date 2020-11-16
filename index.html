@@ -74,6 +74,7 @@
 					<li>Small and lightweight.</li>
 					<li>Contains default configuration for Mainnet and Testnet tokens.</li>
 					<li>Typescript definitions.</li>
+					<li>Full <a href="https://erddevcode.github.io/utils/">documentation</a></li>
 				</ul>
 				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
 					<h2>Installation</h2>
@@ -82,7 +83,26 @@
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 					<h2>Usage</h2>
 				</a>
-				<p>For usage and full documentation see <a href="https://erdDEVcode.github.io/utils">https://erdDEVcode.github.io/utils</a></p>
+				<p>All predefined token and network metadata are in <a href="https://github.com/erdDEVcode/utils/blob/master/data/tokens.json"><code>tokens.json</code></a> and <a href="https://github.com/erdDEVcode/utils/blob/master/data/networks.json"><code>networks.json</code></a> respectively.</p>
+				<p>This data gets loaded in and exposed via the <code>Data</code> export:</p>
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> Data <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;elrond-util&#x27;</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(Data.getToken(<span class="hljs-string">&#x27;xegld&#x27;</span>), <span class="hljs-literal">null</span>, <span class="hljs-number">2</span>))
+<span class="hljs-comment">/*
+  {
+    &quot;symbol&quot;: &quot;XeGLD&quot;,
+    &quot;name&quot;: &quot;Elrond Test eGold&quot;,
+    &quot;decimals&quot;: 18,
+    &quot;id&quot;: &quot;xegld&quot;
+  }
+*/</span></code></pre>
+				<p>If you are building in Typescript then there are various useful type definitions available.</p>
+				<p>For a full list and further documentation see <a href="https://erddevcode.github.io/utils/">https://erddevcode.github.io/utils/</a>.</p>
+				<a href="#developer-guide" id="developer-guide" style="color: inherit; text-decoration: none;">
+					<h2>Developer guide</h2>
+				</a>
+				<p>To publish a new release:</p>
+				<pre><code class="language-shell">yarn release</code></pre>
 				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
 					<h2>License</h2>
 				</a>
