@@ -39,7 +39,7 @@
     "build-docs": "rm -rf ./docs && typedoc --out docs",
     "publish-docs": "npm run build-docs && gh-pages -d docs",
     "prepublishOnly": "npm run build",
-    "postpublish": "npm run docs",
+    "postpublish": "npm run publish-docs",
     "release": "semantic-release"
   },
   "husky": {
