@@ -40,7 +40,7 @@ export class Data {
   }
 
   /**
-   * Get predefined token data.
+   * Get predefined token data for all networks.
    */
   public getTokens(): TokenMap {
     return Object.assign({}, this._tokens)
@@ -56,7 +56,7 @@ export class Data {
   }
 
   /**
-   * Get predefined network metadata.
+   * Get predefined network metadata for all networks.
    */
   public getNetworks(): NetworkMetadataMap {
     return Object.assign({}, this._networks)

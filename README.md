@@ -38,7 +38,16 @@ console.log(JSON.stringify(tokenData, null, 2))
 */
 ```
 
-If you are building in Typescript then there are various useful type definitions available.
+If you are building in Typescript then there are various useful type definitions available, for example:
+
+```js
+import { Balance } from 'elrond-utils'
+
+const bal: Balance = { 
+  token: 'egld',
+  amount: '1000',
+}
+```
 
 For a full list and further documentation see https://erddevcode.github.io/utils/.
 
