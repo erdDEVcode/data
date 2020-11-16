@@ -7,7 +7,7 @@ export interface NetworkMetadata {
    */
   chainId: string,
   /**
-   * The base token used to pay for transactions.
+   * Id of the token used to pay for transactions.
    */
   primaryToken?: string,
 }
@@ -23,7 +23,7 @@ export type NetworkMetadataMap = Record<string, NetworkMetadata>
  */
 export interface Balance {
   /**
-   * The token.
+   * The token id.
    */
   token: string,
   /**
@@ -40,18 +40,20 @@ export interface Balance {
  */
 export interface Rate {
   /**
-   * The token.
+   * The base token id.
    */
   token: string,
   /**
-   * The currency.
+   * The currency token id.
    */
   currency: string,
   /**
-   * The amount in the currency per 1 unit of the token.
+   * The rate.
    * 
-   * Denominated in the smallest unit of the currency. For example, 
-   * for USD this will the USD value multipled by 100.
+   * This specifies the units of the the currency token per 1 unit of the base token.
+   * 
+   * Denominated in standard (i.e. non-smallest) units for both base and currency tokens. For example, 
+   * for eGLD-USD this will be the USD per eGLD.
    */
   value: string,
 }

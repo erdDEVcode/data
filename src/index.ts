@@ -1,6 +1,6 @@
 import { NetworkMetadata, NetworkMetadataMap, Token, TokenMap } from './types'
-const networks = require('./networks.json')
-const tokens = require('./tokens.json')
+const networks = require('../data/networks.json')
+const tokens = require('../data/tokens.json')
 
 export * from './types'
 
@@ -8,14 +8,14 @@ export * from './types'
  * Predefined data.
  */
 class Data {
-  _tokens: TokenMap = {}
-  _networks: NetworkMetadataMap = {}
+  protected _tokens: TokenMap = {}
+  protected _networks: NetworkMetadataMap = {}
 
   constructor() {
     this._tokens = Object.entries(tokens).reduce((m, [key, val]) => {
       const a: Token = {
-        id: key,
         ...(val as Token),
+        id: key,
       }
       m[a.id] = a
       return m
@@ -23,8 +23,8 @@ class Data {
 
     this._networks = Object.entries(networks).reduce((m, [key, val]) => {
       const a: NetworkMetadata = {
-        chainId: key,
         ...(val as NetworkMetadata),
+        chainId: key,
       }
       m[a.chainId] = a
       return m
@@ -34,7 +34,7 @@ class Data {
   /**
    * Get predefined token data.
    */
-  getTokens(): TokenMap {
+  public getTokens(): TokenMap {
     return Object.assign({}, this._tokens)
   }
 
@@ -43,14 +43,14 @@ class Data {
    * 
    * @param id Token
    */
-  getToken(id: string): Token {
+  public getToken(id: string): Token {
     return this.getTokens()[id]
   }
 
   /**
    * Get predefined network metadata.
    */
-  getNetworks(): NetworkMetadataMap {
+  public getNetworks(): NetworkMetadataMap {
     return Object.assign({}, this._networks)
   }
 
@@ -59,8 +59,8 @@ class Data {
    * 
    * @param chainId Network chain id.
    */
-  getNetwork(chainId: string): NetworkMetadata {
-    return this.getNetworks[chainId]
+  public getNetwork(chainId: string): NetworkMetadata {
+    return this.getNetworks()[chainId]
   }
 }
 

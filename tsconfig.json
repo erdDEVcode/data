@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
-    "module": "UMD",
+    "module": "CommonJS",
     "target": "es2015",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
     "declaration": true,
-    "outDir": "./dist"
+    "outDir": "./dist/cjs"
   },
   "include": [
     "src/**/*"

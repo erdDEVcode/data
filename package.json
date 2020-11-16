@@ -1,11 +1,12 @@
 {
   "name": "elrond-utils",
   "version": "1.0.0",
-  "description": "Utils.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "description": "Utilities and data for building with Elrond.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
   "author": "erdDEV team (https://erd.dev)",
-  "homepage": "https://erdDEVcode.github.io/utils",
+  "homepage": "https://erddevcode.github.io/utils/",
   "license": "MIT",
   "files": [
     "dist",
@@ -25,17 +26,21 @@
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/exec": "^5.0.0",
     "@semantic-release/git": "^9.0.0",
+    "gh-pages": "^3.1.0",
     "husky": "^4.3.0",
     "semantic-release": "^17.2.2",
     "typedoc": "^0.19.2",
     "typescript": "^4.0.5"
   },
   "scripts": {
+    "build-data": "mkdir -p ./dist/data && cp ./data/* ./dist/data",
+    "build": "npm run build-data && tsc && tsc -p tsconfig-esm.json",
+    "dev": "npm run build-data && tsc --watch",
+    "build-docs": "rm -rf ./docs && typedoc --out docs",
+    "publish-docs": "npm run build-docs && gh-pages -d docs",
     "prepublishOnly": "npm run build",
-    "release": "semantic-release",
-    "build": "tsc",
-    "dev": "tsc --watch",
-    "build-docs": "rm -rf ./docs && typedoc --out docs"
+    "postpublish": "npm run docs",
+    "release": "semantic-release"
   },
   "husky": {
     "hooks": {
