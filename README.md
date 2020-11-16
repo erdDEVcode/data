@@ -23,9 +23,9 @@ All predefined token and network metadata are in [`tokens.json`](https://github.
 This data gets loaded in and exposed via the `Data` export:
 
 ```js
-import Data from 'elrond-utils'
+import { data } 'elrond-utils'
 
-const tokenData = Data.getToken('xegld')
+const tokenData = data.getToken('xegld')
 
 console.log(JSON.stringify(tokenData, null, 2))
 /*

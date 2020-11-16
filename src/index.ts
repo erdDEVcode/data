@@ -15,7 +15,7 @@ export * from './types'
 /**
  * Predefined data.
  */
-class Data {
+export class Data {
   protected _tokens: TokenMap = {}
   protected _networks: NetworkMetadataMap = {}
 
@@ -75,4 +75,4 @@ class Data {
 /**
  * Singleton instance.
  */
-export default new Data()
+export const data = new Data()
