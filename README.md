@@ -40,6 +40,32 @@ If you are building in Typescript then there are various useful type definitions
 
 For a full list and further documentation see https://erddevcode.github.io/utils/.
 
+## Developer guide
+
+To build both ESM and CommonJS output:
+
+```shell
+yarn build
+```
+
+To re-build the CommonJS output on chnage:
+
+```shell
+yarn dev
+```
+
+To build the docs:
+
+```shell
+yarn build-docs
+```
+
+To publish a new release (this will create a tag, publish to NPM and publich the latest docs):
+
+```shell
+yarn release
+```
+
 ## License
 
 MIT
