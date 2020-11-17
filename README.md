@@ -1,6 +1,6 @@
-# elrond-utils
+# elrond-data
 
-Utilities and data for building with Elrond.
+Data for building with Elrond.
 
 Features:
 
@@ -13,7 +13,7 @@ Features:
 ## Installation
 
 ```
-npm install --save elrond-utils
+npm install --save elrond-data
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ All predefined token and network metadata are in [`tokens.json`](https://github.
 This data gets loaded in and exposed via the `Data` export:
 
 ```js
-import { data } 'elrond-utils'
+import { data } 'elrond-data'
 
 const tokenData = data.getToken('xegld')
 
@@ -41,7 +41,7 @@ console.log(JSON.stringify(tokenData, null, 2))
 If you are building in Typescript then there are various useful type definitions available, for example:
 
 ```js
-import { Balance } from 'elrond-utils'
+import { Balance } from 'elrond-data'
 
 const bal: Balance = { 
   token: 'egld',

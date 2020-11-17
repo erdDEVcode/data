@@ -1,7 +1,7 @@
 {
-  "name": "elrond-utils",
+  "name": "elrond-data",
   "version": "1.1.1",
-  "description": "Utilities and data for building with Elrond.",
+  "description": "Data for building with Elrond.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
