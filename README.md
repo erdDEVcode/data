@@ -40,7 +40,7 @@ console.log(JSON.stringify(tokenData, null, 2))
 
 If you are building in Typescript then there are various useful type definitions available, for example:
 
-```js
+```typescript
 import { Balance } from 'elrond-data'
 
 const bal: Balance = { 
