@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/erdDEVcode/utils/compare/v1.2.0...v1.3.0) (2020-11-24)
+
+
+### Features
+
+* Add network system contract addresses ([b0ab225](https://github.com/erdDEVcode/utils/commit/b0ab2259877242d1eaa2de74af469986eadd455b))
+
 # [1.2.0](https://github.com/erdDEVcode/utils/compare/v1.1.1...v1.2.0) (2020-11-17)
 
 ## [1.1.1](https://github.com/erdDEVcode/utils/compare/v1.1.0...v1.1.1) (2020-11-16)
