@@ -10,6 +10,18 @@ export interface NetworkMetadata {
    * Id of the token used to pay for transactions.
    */
   primaryToken?: string,
+  /**
+   * Address of system auction contract.
+   */
+  auctionContract?: string,
+  /**
+   * Address of system staking contract.
+   */
+  stakingContract?: string,
+  /**
+   * Address of system delegation contract.
+   */
+  delegationContract?: string,
 }
 
 /**
