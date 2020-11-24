@@ -1,12 +1,16 @@
+[![NPM module](https://badge.fury.io/js/elrond-data.svg)](https://badge.fury.io/js/elrond-data)
+[![Join the community](https://img.shields.io/badge/Chat%20on-Telegram-brightgreen.svg?color=0088cc)](https://t.me/erdDEV)
+[![Follow on Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&label=Follow&maxAge=2592000)](https://twitter.com/erd_dev)
+
 # elrond-data
 
 Data for building with Elrond.
 
 Features:
 
-* Cross-platform: Node.js, Browser, Web workers and React Native.
-* Small and lightweight.
 * Contains default configuration for Mainnet and Testnet tokens.
+* Small and lightweight
+* Cross-platform: Node.js, Browser, Web workers and React Native.
 * Typescript definitions.
 * Full [documentation](https://erddevcode.github.io/utils/)
 
