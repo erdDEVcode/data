@@ -4,7 +4,7 @@
 
 # elrond-data
 
-Data for building with Elrond.
+JSON data files for Elrond network and token configurations.
 
 Features:
 
